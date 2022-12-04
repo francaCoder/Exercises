@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  padding: 40px 0;
+  background-color: blueviolet;
+  min-height: 400px;
+}
+
+.center {
+  display: flex;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 2%;
+  flex-wrap: wrap;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* A largura é referente ao elemento pai */
+  width: 100%;
+}
+
+.menu h3 {
+  color: white;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+
+.form {
+  display: flex;
+  max-width: 600px;
+
+  width: 100%;
+  margin: 40px auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form h2 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.items-form {
+  margin: 0 auto;
+  max-width: 540px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.items-form input[type="text"] {
+  width: 48%;
+  height: 30px;
+  margin: 8px 0px;
+  padding-left: 10px;
+}
+
+.items-form input[type="submit"] {
+  width: 100%;
+  height: 40px;
+  background-color: #E7423B;
+  cursor: pointer;
+  color: white;
+  border: none;
+  font-size: 19px;
+}
+
+.conteudo-single {
+  width: 50%;
+  margin-top: 40px;
+  padding: 8px 30px;
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    width: 100%;
+  }
+
+  .conteudo-single {
+    width: 100%;
+  }
+}
