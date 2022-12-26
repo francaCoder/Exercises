@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    /* Eixo - Y */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* Eixo - Y */
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 5px;
+
+    /* Content - Alinhar o prórprio grid relativo ao espaço fora do grid 
+        
+        Eixo - X / Colunas
+        justify-content: start; 
+        justify-content: end; 
+        justify-content: center; 
+        justify-content: space-between; 
+        justify-content: space-around; 
+        justify-content: space-evenly; 
+
+        Eixo - Y / Linhas
+        align-content: start;
+        align-content: end;
+        align-content: center;
+        align-content: space-between;
+        align-content: space-around;
+        align-content: space-evenly;
+    */
+
+    /* Items - Movimentação dos items do nosso grid em qualquer espaço disponível nos nossos elementos
+    
+        Eixo - X 
+        justify-items:  start; 
+        justify-items: end; 
+        justify-items: center; 
+
+        Eixo - Y
+        align-items: start;
+        align-items: end;
+        align-items: center;
+    */
+
+    /*  Justify Self - Ele é usado direto no elemento e não no container grid.
+
+        justify-self: start;
+        justify-self: center;
+        justify-self: end; 
+    */
+}
+
+.container>div {
+    background-color: #7159c1;
+    /* width: 50%; */
+    /* height: 50%; */
+}

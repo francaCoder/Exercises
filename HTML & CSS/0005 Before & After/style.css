@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+}
+
+/* .before, .after {
+    background-color: red;
+} */
+
+/* Pseudo Elementos - Basicamente elementos que não existem e foram criados por Css */
+
+.container::before, .container::after {
+    content: "Before";
+    background-color: red;
+    display: block;
+}
+
+.container::after {
+    content: "After";
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.container2 div {
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container2 div:nth-child(1) p::before{
+    content: "";
+    display: inline-block;
+    background-color: #FFF;
+    height: 25px;
+    width: 25px;
+}
+
+.container2 div:nth-of-type(n+2)::before {
+    content: "";
+    background-color: gray;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.container2 div:nth-of-type(n+2)::after {
+    content: "Botão";
+    background-color: rgb(255, 255, 255);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
