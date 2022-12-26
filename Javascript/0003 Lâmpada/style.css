@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#lampada {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    cursor: pointer;
+}
+
+#buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    width: 80px;
+}
+
+#refresh {
+    display: none;
+}
+

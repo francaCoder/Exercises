@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.image {
+    background: url(./images/desligado.png) no-repeat center;
+    background-size: auto;
+    width: 250px;
+    height: 275px;
+}
+
+.buttons button {
+    background-color: rgb(10, 10, 70);
+    width: 100px;
+    color: white;
+    padding: 8px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#display h2 {
+    display: none;
+}
+
+.displayn {
+    display: none;
+}
+
+.displayb {
+    display: block;
+}
+
+/*
+.red {
+    background: url(./images/vermelho.png) no-repeat center;
+}
+
+.yellow {
+    background: url(./images/amarelo.png) no-repeat center;
+}
+
+.green {
+    background: url(./images/verde.png) no-repeat center;
+} */

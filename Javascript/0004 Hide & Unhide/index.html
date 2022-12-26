@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esconder e mostrar elementos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Esconder e mostrar elementos</h1>
+
+    <div id="buttons">
+        <button onclick="hide('content')">
+            Esconder
+        </button>
+
+        <button onclick="unhide('content')">
+            Mostrar
+        </button>
+
+        <button onclick="toggle('content')">
+            Alternar
+        </button>
+    </div>
+
+    <div id="content">
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt saepe eum similique et alias ipsum ab nisi consectetur sunt, quo atque velit obcaecati ipsa error commodi consequatur accusamus? Enim, cumque
+        </p>
+
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt saepe eum similique et alias ipsum ab nisi consectetur sunt, quo atque velit obcaecati ipsa error commodi consequatur accusamus? Enim, cumque
+        </p>
+
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt saepe eum similique et alias ipsum ab nisi consectetur sunt, quo atque velit obcaecati ipsa error commodi consequatur accusamus? Enim, cumque
+        </p>
+        
+    </div>
+
+    <div id="move">
+        <p>Movimentação automática</p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+#buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#buttons button {
+    background-color: rgb(60, 60, 122);
+    width: 100px;
+    padding: 15px;
+    color: white;
+    cursor: pointer
+}
+
+#content {
+    background-color: dimgray;
+    width: 50%;
+    color: white;
+    display: flex;
+    gap: 10px;
+    border: 2px solid black;
+}
+
+#move {
+    background-color: rgb(60, 60, 122);
+    width: 250px;
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    border: 2px solid black;
+}

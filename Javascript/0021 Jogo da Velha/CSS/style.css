@@ -1,0 +1,152 @@
+body {
+    background: linear-gradient(
+        90deg,
+        rgba(65, 184, 131, 1) 0%,
+        rgba(0, 212, 255, 1) 100%
+    );
+    width: 100vw;
+    height: 100vh;
+}
+
+.board {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    /* Centralizar a célula no body */
+    align-content: center;
+    justify-content: center;
+
+    /* Centralizar o X e O na célula */
+    align-items: center; 
+    justify-items: center;
+
+    grid-template-columns: repeat(3, auto);
+}
+
+.board.x .cell:not(.x):not(.circle):hover::after,
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.circle .cell:not(.x):not(.circle):hover::after,
+.board.circle .cell:not(.x):not(.circle):hover::before {
+    background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.cell.x, .cell.circle {
+    cursor: not-allowed;
+}
+
+/* Tirar algumas bordas */
+.cell:nth-child(1), 
+.cell:nth-child(2), 
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(1), 
+.cell:nth-child(4), 
+.cell:nth-child(7) {
+    border-left: none;
+}
+
+.cell:nth-child(3), 
+.cell:nth-child(6), 
+.cell:nth-child(9) {
+    border-right: none;
+}
+
+.cell:nth-child(7), 
+.cell:nth-child(8), 
+.cell:nth-child(9) {
+    border-bottom: none;
+}
+
+/* X - Vamos faze-lo com css, uma perna do x vai ser o after e outra o before, depois vamos rotacionar cada uma para fazer a intersecção*/
+/* Quando a gente tiver o X em board, vamos colocar um hover::after e um hover::before na cell */
+.cell.x::before,
+.cell.x::after,
+/* Quero pegar todas as células que não tem a classe X e nem a classe Circle e adicionar o hover after e o before nelas para criar o X */
+/* Se a jogada for X, queremos adicionar um hover nas célular que não tem conteúdo */
+.board.x .cell:not(.x):not(.circle):hover::after,
+.board.x .cell:not(.x):not(.circle):hover::before {
+    content: "";
+    background-color: #FFF;
+    /* 100px é a largura/altura da nossa célula, usando o calc() definimos que cada perna do x terá 15% do tamanho da célula */
+    width: calc(100px * 0.70);
+    height: calc(100px * 0.15);
+    position: absolute;
+}
+
+.cell.x::before,
+.board.x .cell:not(.x):not(.circle):hover::before {
+    transform: rotate(45deg);
+}
+
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::after {
+    transform: rotate(-45deg);
+}
+
+
+/* Circle - Vamos faze-lo com css, uma perna do x vai ser o after e outra o before, depois vamos rotacionar cada uma para fazer a intersecção*/
+.cell.circle::before,
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover::after, 
+.board.circle .cell:not(.x):not(.circle):hover::before {
+    content: "";
+    background-color: #FFF;
+    /* 100px é a largura/altura da nossa célula, usando o calc() definimos que cada perna do x terá 15% do tamanho da célula */
+    width: calc(100px * 0.70);
+    height: calc(100px * 0.70);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.winning-message {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* sobrescrever e ocupar toda a tela */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    display: none;
+}
+
+.winning-message-text {
+    color: white;
+    font-size: 5rem;
+}
+
+.winning-message-button {
+    background-color: rgba(65, 184, 131, 1);
+    color: white;
+    font-size: 2.5rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+.winning-message-button:hover {
+    background-color: #FFF;
+    color: rgba(65, 184, 131, 1);
+}
+
+.show-winning-message {
+    display: flex;
+}
