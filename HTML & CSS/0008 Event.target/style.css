@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+body div:nth-child(2) {
+    background-color: #200a3f;
+}
+
+body div:nth-child(2) h1 {
+    background-color: #fd5053;
+    width: 300px;
+}
+
+body div:nth-child(2) p {
+    background-color: #76d95c;
+}
